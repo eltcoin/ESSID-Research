@@ -1,11 +1,12 @@
 # Centrality Metrics
 ## Research Document
 
+These centrality measures can be applied to different types of networks, including social networks, communication networks, and transportation networks. We are interested in how they can be applied to identify influential nodes (good and bad actors) in the network, detect community structures, and understand the flow of information or virtual assets through our network.
 
-Centrality measures are used to identify the most important nodes in a network, based on their connections to other nodes. Here is a list of some common centrality metrics:
+Here is a list of some common centrality metrics:
 
 
-
+---
 
 1. Degree Centrality
 
@@ -90,7 +91,7 @@ Centrality measures are used to identify the most important nodes in a network, 
   - Group centrality is a centrality measure that takes into account the importance of a group or community within the network.
   - It is calculated by summing the centralities of all the nodes in the group.
 
-## Pareto Factor
+16. Pareto Factor
 
   - The Pareto factor is a measure of the inequality of centralities within a network.
   - It is calculated by dividing the centrality of the most central node by the centrality of the least central node.
