@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Ethereum Node Graph</title>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="txHashInput">Transaction Hash</label>
+                        <input type="text" class="form-control" id="txHashInput" placeholder="Enter transaction hash">
+                    </div>
+                    <button onclick="main()" class="btn btn-primary">Generate Node Graph</button>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5" id="nodegraphContainer">
+
+    </div>
+
+    <!-- Include ethers.js and D3.js libraries -->
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.1/dist/ethers.umd.min.js"></script>
+    <script type="text/javascript">
+        let main = async () => {
+        // Create a new instance of the ethers.js library
+        const provider = await new ethers.providers.JsonRpcProvider('https://rpc.testnet.tomochain.com/');
+        let result = await showNodegraph();
+        // Function to show the nodegraph for a given transaction hash
+        async function showNodegraph() {
+            // Get the transaction hash from the input field
+            const txHash = document.getElementById('txHashInput').value;
+
+            // Get the transaction receipt for the given transaction hash
+            const receipt = await provider.getTransactionReceipt(txHash);
+
+            console.log(receipt);
+
+            // Create an array of nodes for the D3.js nodegraph
+            const nodes = [];
+            // Add the transaction hash as a node
+            nodes.push({
+                id: txHash,
+                label: txHash
+            });
+
+            // Iterate over all logs in the transaction receipt
+            for (const log of receipt.logs) {
+                // Add the log's address as a node
+                nodes.push({
+                    id: log.address,
+                    label: log.address
+                });
+            }
+
+            // Create an array of links for the D3.js nodegraph
+            const links = [];
+            // Add a link from the transaction hash to each log's address
+            for (const log of receipt.logs) {
+                links.push({
+                    source: txHash,
+                    target: log.address
+                });
+            }
+
+            console.log(nodes);
+            console.log(links);
+
+            function ticked() {
+                link
+                    .attr("x1", d => d.source.x)
+                    .attr("y1", d => d.source.y)
+                    .attr("x2", d => d.target.x)
+                    .attr("y2", d => d.target.y);
+
+                node
+                    .attr("cx", d => d.x)
+                    .attr("cy", d => d.y);
+            }
+
+            // Create a D3.js force simulation
+            const simulation = d3.forceSimulation(nodes, links)
+                .force('link', d3.forceLink(links).id(d => d.id))
+                .force('charge', d3.forceManyBody())
+                .force('center', d3.forceCenter()).on('tick', ticked)
+
+            // Select the nodegraph div element
+            const nodegraphDiv = d3.select('#nodegraphContainer');
+
+            // Append a SVG to the nodegraph div element
+            const svg = nodegraphDiv.append('svg');
+
+            // Append a group to the SVG
+            const g = svg.append('g');
+
+            // Append a link element for each link in the links array
+            const link = g.append('g')
+                .attr('stroke', '#999')
+                .attr('stroke-opacity', 0.6)
+                .selectAll('line')
+                .data(links)
+                .join('line')
+                .attr('stroke-width', 1.5);
+
+            // Append a node element for each node in the nodes array
+            const node = g.append('g')
+                .attr('stroke', '#fff')
+                .attr('stroke-width', 1.5)
+                .selectAll('circle')
+                .data(nodes)
+                .join('circle')
+                .attr('r', 5)
+                .attr('fill', d => d3.color('#69b3a2'))
+                .call(drag(simulation));
+        }
+        function drag(simulation) {
+                function dragstarted(event) {
+                    if (!event.active) simulation.alphaTarget(0.3).restart();
+                    event.subject.fx = event.subject.x;
+                    event.subject.fy = event.subject.y;
+                }
+
+                function dragged(event) {
+                    console.log(event);
+                    event.subject.fx = event.x;
+                    event.subject.fy = event.y;
+                }
+
+                function dragended(event) {
+                    if (!event.active) simulation.alphaTarget(0);
+                    event.subject.fx = null;
+                    event.subject.fy = null;
+                }
+
+                return d3.drag()
+                    .on("start", dragstarted)
+                    .on("drag", dragged)
+                    .on("end", dragended);
+            }
+    }
+    main();
+    </script>
+
+</body>
+
+</html>

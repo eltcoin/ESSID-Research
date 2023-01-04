@@ -1,0 +1,106 @@
+<html>
+
+<head>
+    <!-- Load Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <style>
+        /* Add some additional styling to the page */
+        #node-graph {
+            width: 1000px;
+            height: 1000px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Add a container for the input field and button -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-5">
+                <!-- Use a Bootstrap form to style the input field and button -->
+                <form>
+                    <div class="form-group">
+                        <label for="address-input">Ethereum Address</label>
+                        <input type="text" class="form-control" id="address-input" placeholder="Enter Ethereum address">
+                    </div>
+                    <button id="submit-button" class="btn btn-primary">Generate Node Graph</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Add a container for the D3 force graph -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div id="node-graph"></div>
+        </div>
+    </div>
+
+    <!-- Load D3 and Ethers.js -->
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.1/dist/ethers.umd.min.js"></script>
+    <script type="text/javascript">
+        async function generateNodeGraph(address) {
+            // First, we need to set up a connection to the Ethereum network
+            const provider = await new ethers.providers.JsonRpcProvider('https://rpc.testnet.tomochain.com/');
+
+
+
+            // Initialize an empty array to store the transactions
+            let transactions = [];
+
+            // Get the current block number
+            const blockNumber = await provider.getBlockNumber();
+
+            // Iterate through each block
+            for (let i = 0; i < blockNumber; i++) {
+                // Get the transactions in the block
+                const block = await provider.getBlock(i);
+                console.log(block);
+
+                // Iterate through each transaction in the block
+                for (let j = 0; j < block.transactions.length; j++) {
+                    // Get the transaction
+                    const transaction = await provider.getTransaction(block.transactions[j]);
+
+                    // If the transaction involves the given address, add it to the transactions array
+                    if (transaction.from === address || transaction.to === address) {
+                        transactions.push(transaction);
+                    }
+                }
+            }
+
+            // Now, we can create a D3 force graph using the transaction data
+            const nodeGraph = d3.select('#node-graph');
+
+            // Add a node for each transaction in the transaction list
+            nodeGraph
+                .selectAll('circle')
+                .data(transactions)
+                .enter()
+                .append('circle')
+                .attr('cx', (d, i) => i * 50 + 25)
+                .attr('cy', 50)
+                .attr('r', 20)
+                .style('fill', 'steelblue');
+
+            // Add a label for each node showing the transaction hash
+            nodeGraph
+                .selectAll('text')
+                .data(transactions)
+                .enter()
+                .append('text')
+                .attr('x', (d, i) => i * 50 + 25)
+                .attr('y', 50)
+                .attr('dy', '.35em')
+                .style('text-anchor', 'middle')
+                .text(d => d.hash);
+        }
+    </script>
+
+
+</body>
+
+</html>
