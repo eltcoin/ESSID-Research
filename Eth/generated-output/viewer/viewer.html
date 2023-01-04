@@ -48,11 +48,43 @@
                 .attr('width', width)
                 .attr('height', height);
 
+            const colorScale = d3.scaleLinear()
+                .domain([0, 0.1])
+                .range(['#d7f2fd','#11aacc']);
+            const sizeScale = d3.scaleLinear()
+                .domain([0, 10000])
+                .range([5, 20]);
+            const opacityScale = d3.scaleLinear()
+                .domain([0, 1])
+                .range([0.3, 1]);
+            // const strengthScale = d3.scaleLinear()
+            //     .domain([0, 1])
+            //     .range([0.1, 1]);
+            const strengthScale = d3.scalePow()
+                .exponent(2)
+                .domain([0, 1])
+                .range([0.1, 1]);
+            const distanceScale = d3.scaleLinear()
+                .domain([0, 1])
+                .range([0, 500]);
+
+
+            let trustToPercent = (number) => {
+                Math.round(a * 10 ** 3)
+            }
+
+            
+
+
             // Create the simulation
             const simulation = d3.forceSimulation(input.nodes)
                 .force('charge', d3.forceManyBody().strength(-200))
                 .force('link', d3.forceLink(input.links).distance(250))
                 .force('center', d3.forceCenter(width / 2, height / 2))
+                .force('link', d3.forceLink().id(d => d.id).strength(d => strengthScale(d.trust)).distance(d =>
+                    distanceScale(d.trust)))
+                // .force('charge', d3.forceManyBody().strength(-200))
+                // .force('center', d3.forceCenter(width / 2, height / 2))
                 .force('x', d3.forceX())
                 .force('y', d3.forceY())
                 .on('tick', ticked);
@@ -72,7 +104,7 @@
                 .data(input.nodes)
                 .join('circle')
                 .attr('class', 'node')
-                .attr('r', d => (d.trustMetrics.overallTrust * 25 ) )
+                .attr('r', d => (d.trustMetrics.overallTrust * 25))
                 .call(drag(simulation));
 
             // Add labels to the nodes
@@ -81,12 +113,13 @@
                 .selectAll('text')
                 .data(input.nodes)
                 .join('text')
-                .text(d => d.name)
+                .text(d => (d.name + '\n group:' + (d.group)))
                 .attr('dx', 15)
                 .attr('dy', 4);
 
             // Update the positions of the elements on each tick of the simulation
             function ticked() {
+                applyTrustMetrics(input.nodes, input.links);
                 link
                     .attr('x1', d => d.source.x)
                     .attr('y1', d => d.source.y)
@@ -124,6 +157,21 @@
                     .on("start", dragstarted)
                     .on("drag", dragged)
                     .on("end", dragended);
+            }
+
+            function applyTrustMetrics(nodes, links) {
+
+                // Select the nodes and links in the force graph
+                const node = d3.selectAll('.node');
+                const link = d3.selectAll('.link');
+
+                // Set the colors, sizes, opacities, strengths, and distances based on the trust metrics
+                node.style('fill', d => colorScale(d.trustMetrics.overallTrust))
+                    .attr('r', d => sizeScale(d.trustMetrics.overallTrust));
+                link.style('stroke', d => colorScale(d.trust))
+                    .style('opacity', d => opacityScale(d.trust));
+                simulation.force('link').strength(d => strengthScale(d.trust)).distance(d => distanceScale(d
+                    .trust));
             }
 
 
