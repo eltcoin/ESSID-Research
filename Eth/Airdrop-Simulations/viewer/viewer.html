@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Force Graph</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+        <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        .link {
+            stroke: #999;
+            stroke-opacity: 0.6;
+        }
+
+        .labels text {
+            font-weight: 100;
+            font-size: xx-small;
+        }
+
+        #graph {
+            border-radius: 5px;
+            border: 1px solid black;
+            margin: auto;
+        }
+
+        .node {
+            fill: #ddd;
+            stroke: #eee;
+            stroke-width: 1.5px;
+        }
+
+        svg {
+            /* border: 1px solid red; */
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="text-center my-3">Force Graph</h1>
+                <div class="form-group">
+                    <label for="input">Input</label>
+                    <textarea class="form-control" id="input" rows="10"></textarea>
+                </div>
+                <!-- Add a form to enter the name of the force graph object -->
+                <div class="col-md-12 visually-hidden">
+                    <form id="save-form" class="form-inline">
+                        <label for="name-input" class="sr-only">Name:</label>
+                        <input type="text" id="name-input" class="form-control mb-2 mr-sm-2" placeholder="Name">
+                        <button type="submit" class="btn btn-primary mb-2">Save Graph</button>
+                    </form>
+                    <ul id="test-objects" class="list-group mt-3"></ul>
+                </div>
+                <label class="form-label" for="repulsion-slider">Group Repulsion</label>
+                <div class="range">
+                    <input type="range" class="form-range" id="repulsion-slider" min="-1500" max="500" value="-200" onchange="sliderChanged()" />
+                </div>
+                <button class="btn btn-primary btn-block" onclick="drawGraph()">Draw Graph</button>
+            </div>
+            <div id="graph" class="my-3 col-md-11" style="width: 750px; height: 500px;"></div>
+        </div>
+    </div>
+
+    <!-- Saving / Loading etc -->
+
+    <script>
+        // Get a reference to the save form
+        const saveForm = document.getElementById('save-form');
+
+        // Get a reference to the name input
+        const nameInput = document.getElementById('name-input');
+
+        // Get a reference to the test objects list
+        const testObjectsList = document.getElementById('test-objects');
+
+
+        if (localStorage.getItem(tests) === null) {
+            localStorage.setItem(tests, [{
+                name: 'ex1'
+            }]);
+        }
+
+        // Add an event listener to the save form
+        saveForm.addEventListener('submit', (event) => {
+            // Prevent the form from submitting
+            event.preventDefault();
+
+            // Get the name of the force graph object
+            const name = nameInput.value;
+
+            const rawGraphObject = JSON.parse(document.getElementById('input').value);
+
+
+            // Check if the force graph object is already saved
+            if (localStorage.getItem(tests.name) === null) {
+                // Save the force graph object to local storage
+                localStorage.setItem(tests.name, JSON.stringify(rawGraphObject));
+
+                // Create a new list item for the test object
+                const newListItem = document.createElement('li');
+                newListItem.innerHTML = name;
+
+                // Add the new list item to the test objects list
+                testObjectsList.appendChild(newListItem);
+            } else {
+                // Display an alert if the force graph object is already saved
+                alert(
+                    `A force graph object with the name "${name}" is already saved. Please choose a different name.`);
+            }
+        });
+    </script>
+
+
+    <!-- D3  Stuff -->
+
+    <script>
+        let drawGraph = () => {
+
+            // Select the div element to render the force graph
+            let graphDiv = document.getElementById('graph');
+            graphDiv.innerHTML = ""; // Clear the graph 
+            let graphDivD3 = d3.select('#graph');
+
+            const input = JSON.parse(document.getElementById('input').value);
+
+            // Get a reference to the repulsion slider
+            const repulsionSlider = document.getElementById('repulsion-slider');
+
+            // Add an event listener to the repulsion slider
+            repulsionSlider.addEventListener('input', () => {
+                // Get the value of the repulsion slider
+                const value = repulsionSlider.value;
+
+                // Change the repulsion of the force graph
+                try {                changeRepulsion(value);} catch {}
+            });
+
+
+
+            // Set the dimensions of the SVG
+            const width = 1000;
+            const height = 500;
+
+            // Create the SVG element
+            const svg = d3.create('svg')
+                .attr('width', width)
+                .attr('height', height);
+
+            const colorScale = d3.scaleLinear()
+                .domain([0.01, 0.2])
+                .range(['#d7f2fd', '#11aacc']);
+
+            const colorScaleBool = d3.scaleLinear().domain([1, 0]).range('#e2e', '#f4f')
+            const sizeScale = d3.scaleLinear()
+                .domain([0.01, 0.2])
+                .range([5, 20]);
+            const opacityScale = d3.scaleLinear()
+                .domain([0, 1])
+                .range([0.3, 1]);
+            // const strengthScale = d3.scaleLinear()
+            //     .domain([0, 1])
+            //     .range([0.1, 1]);
+            const strengthScale = d3.scalePow()
+                .exponent(-100)
+                .domain([0.1, 0.5])
+                .range([0.1, 1]);
+            const distanceScale = d3.scaleLinear()
+                .domain([0, 1])
+                .range([0, 500]);
+
+
+            let trustToPercent = (number) => {
+                Math.round(a * 10 ** 3)
+            }
+
+
+
+
+            // Create the simulation
+            const simulation = d3.forceSimulation(input.nodes)
+                // .force('charge', d3.forceManyBody().strength(-100))
+                .force('link', d3.forceLink(input.links).id(d => d.id))
+                .force('charge', d3.forceManyBody().strength(-150)) // Strong repulsion between unlinked groups
+                .force('link', d3.forceLink(input.links).distance(250))
+                .force('center', d3.forceCenter(width / 2, height / 2))
+                // .force('link', d3.forceLink().id(d => d.id).strength(d => strengthScale(d.trust)).distance(d =>
+                // distanceScale(d.trust)))
+                // .force('charge', d3.forceManyBody().strength(-200))
+                // .force('center', d3.forceCenter(width / 2, height / 2))
+                .force('x', d3.forceX())
+                .force('y', d3.forceY())
+                .on('tick', ticked);
+
+
+            // Add the links to the SVG
+            const link = svg.append('g')
+                .attr('class', 'links')
+                .selectAll('line')
+                .data(input.links)
+                .join('line')
+                .attr('class', 'link');
+
+            // Add the nodes to the SVG
+            const node = svg.append('g')
+                .attr('class', 'nodes')
+                .selectAll('circle')
+                .data(input.nodes)
+                .join('circle')
+                .attr('class', 'node')
+                .attr('r', d => (d.trustMetrics.overallTrust * 25))
+                .call(drag(simulation));
+
+            // Add labels to the nodes
+            const label = svg.append('g')
+                .attr('class', 'labels')
+                .selectAll('text')
+                .data(input.nodes)
+                .join('text')
+                .text(d => (d.name + ' Group:' + (d.group + ' ID:' + d.id)))
+                .attr('dx', 15)
+                .attr('dy', 4);
+
+            // Update the positions of the elements on each tick of the simulation
+            function ticked() {
+                applyTrustMetrics(input.nodes, input.links);
+                // Add the forceManyBody force to the simulation
+                link
+                    .attr('x1', d => d.source.x)
+                    .attr('y1', d => d.source.y)
+                    .attr('x2', d => d.target.x)
+                    .attr('y2', d => d.target.y);
+                node
+                    .attr('cx', d => d.x)
+                    .attr('cy', d => d.y);
+                label
+                    .attr('x', d => d.x)
+                    .attr('y', d => d.y);
+            }
+
+            // Add drag behavior to the nodes
+            function drag(simulation) {
+                function dragstarted(event) {
+                    if (!event.active) simulation.alphaTarget(0.3).restart();
+                    event.subject.fx = event.subject.x;
+                    event.subject.fy = event.subject.y;
+                }
+
+                function dragged(event) {
+                    // console.log(event);
+                    event.subject.fx = event.x;
+                    event.subject.fy = event.y;
+                }
+
+                function dragended(event) {
+                    if (!event.active) simulation.alphaTarget(0);
+                    event.subject.fx = null;
+                    event.subject.fy = null;
+                }
+
+                return d3.drag()
+                    .on("start", dragstarted)
+                    .on("drag", dragged)
+                    .on("end", dragended);
+            }
+
+            function applyTrustMetrics(nodes, links) {
+
+                // Select the nodes and links in the force graph
+                const node = d3.selectAll('.node');
+                const link = d3.selectAll('.link');
+
+                // Set the colors, sizes, opacities, strengths, and distances based on the trust metrics
+                node.style('fill', d => colorScale(d.trustMetrics.overallTrust))
+                    .attr('r', d => sizeScale(d.trustMetrics.overallTrust));
+                node.style('fill', d => colorScale(d.isSybil));
+                link.style('stroke', d => colorScale(d.trust))
+                    .style('opacity', d => opacityScale(d.trust));
+                simulation.force('link').strength(d => strengthScale(d.trust)).distance(d =>
+                    distanceScale(d
+                        .trust));
+            }
+
+            function changeRepulsion(value) {
+
+            let _node = d3.selectAll('.node')
+            simulation.force('charge', d3.forceManyBody().strength(value)).alpha(1).restart();
+}
+
+
+            // Append the SVG element to the div element
+            graphDivD3.node().appendChild(svg.node());
+
+        }
+    </script>
+</body>
+
+</html>
