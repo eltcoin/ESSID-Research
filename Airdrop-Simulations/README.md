@@ -3,7 +3,7 @@
 
 
 <p align="center">
-  <img style="max-width:50px" src="https://d33wubrfki0l68.cloudfront.net/cf9fc07728f1a59f546d83172784701e3b4a659d/40c12/static/eltwallet.c6dbb42e.png" alt="ELTCOIN logo">
+  <img style="width:250px" src="https://d33wubrfki0l68.cloudfront.net/cf9fc07728f1a59f546d83172784701e3b4a659d/40c12/static/eltwallet.c6dbb42e.png" alt="ELTCOIN logo">
 </p>
 
 This repository contains code and data for experimenting with various graph Visualisation techniques and centrality metrics. It includes a number of scripts for generating synthetic data sets, functions for calculating centrality metrics, and examples of rendering the resulting graphs using the D3.js library.
