@@ -7,6 +7,7 @@ let shuffle = _.shuffle;
 let generateId = (_bytes = 16) => {
   return crypto.randomBytes(_bytes).toString('hex');
 }
+const runID = generateId(4);
 let generateTestDataEBSL = (numNodes, numGroups, numSybils) => {
 
   function generateName() {
@@ -138,7 +139,9 @@ let generateTestDataEBSL = (numNodes, numGroups, numSybils) => {
 
   console.log(`Updated nodes with overall trust values`);
 
-  console.log('Test data generation complete. for ');
+  
+
+  console.log(`Test data generation complete for ${runID}`);
 
   return {
     nodes,
@@ -160,7 +163,7 @@ let writeJSONDataToFile = (data, filePath) => {
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
 }
 
-let runID = generateId(4);
+
 
 console.log(`DONE: ${runID}`)
 
@@ -183,5 +186,6 @@ if (_totalNodes !== undefined ) {
     params.sybils = _sybils
   };
 }
-
-writeJSONDataToFile(generateTestDataEBSL(params.totalNodes, params.subgroups, params.sybils), './generated-output/Simulation_' + runID + '.json');
+let outFile = './Airdrop-Simulations/generated-output/Simulation_' + runID + '.json';
+writeJSONDataToFile(generateTestDataEBSL(params.totalNodes, params.subgroups, params.sybils), outFile);
+console.log(`Wrote  ${outFile}`)
