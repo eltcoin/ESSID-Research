@@ -1,0 +1,1781 @@
+{
+  "nodes": [
+    {
+      "id": "cd6178b02f28a690b8798fe3f14bbbcd",
+      "name": "Dave",
+      "trustMetrics": {
+        "directTrust": 0.41839519178264356,
+        "indirectTrust": 0.41221919414102526,
+        "overallTrust": 0.4299552618060055
+      },
+      "x": 334.71615342611483,
+      "y": 247.33151648461515
+    },
+    {
+      "id": "d3d983d74c96b6f6bbad5b2fad4881e8",
+      "name": "Bob",
+      "trustMetrics": {
+        "directTrust": 0.5288358026668741,
+        "indirectTrust": 0.6319698862009951,
+        "overallTrust": 0.34389707336212194
+      },
+      "x": 423.0686421334993,
+      "y": 379.1819317205971
+    },
+    {
+      "id": "9ac9be35d4f5890aaca87a87864924ea",
+      "name": "Ida",
+      "trustMetrics": {
+        "directTrust": 0.5086389890376417,
+        "indirectTrust": 0.6020078849828049,
+        "overallTrust": 0.6322050840272163
+      },
+      "x": 406.9111912301134,
+      "y": 361.20473098968296
+    },
+    {
+      "id": "c5f824654a6f96ec1246575ad08d6032",
+      "name": "Frank",
+      "trustMetrics": {
+        "directTrust": 0.5715895973682933,
+        "indirectTrust": 0.3628998906497549,
+        "overallTrust": 0.5814805600248216
+      },
+      "x": 457.27167789463465,
+      "y": 217.73993438985295
+    },
+    {
+      "id": "469ec02cbd7a63e6389fbcfb74f460d5",
+      "name": "Henry",
+      "trustMetrics": {
+        "directTrust": 0.925221331756557,
+        "indirectTrust": 0.9971621341735695,
+        "overallTrust": 0.82950398864537
+      },
+      "x": 740.1770654052456,
+      "y": 598.2972805041417
+    },
+    {
+      "id": "cba2fb153fae27fdff97c8fc5aee7b3d",
+      "name": "Gina",
+      "trustMetrics": {
+        "directTrust": 0.7076406282472206,
+        "indirectTrust": 1.0156503227366822,
+        "overallTrust": 0.8716761893076045
+      },
+      "x": 566.1125025977765,
+      "y": 609.3901936420093
+    },
+    {
+      "id": "4f8b33cb038bd01ac9bb2adbee253730",
+      "name": "Dave",
+      "trustMetrics": {
+        "directTrust": 0.8280484986921178,
+        "indirectTrust": 0.8252658179611547,
+        "overallTrust": 1.0166951558492174
+      },
+      "x": 662.4387989536942,
+      "y": 495.15949077669285
+    },
+    {
+      "id": "247b4985d1ca0dce655ab165c827add8",
+      "name": "Ida",
+      "trustMetrics": {
+        "directTrust": 0.8737113366253054,
+        "indirectTrust": 0.761488063776943,
+        "overallTrust": 0.825337271440048
+      },
+      "x": 698.9690693002443,
+      "y": 456.8928382661658
+    },
+    {
+      "id": "3bdc457eb75b7b5e8e12e4d47369b94b",
+      "name": "Henry",
+      "trustMetrics": {
+        "directTrust": 1.0813291290397267,
+        "indirectTrust": 1.0433218477780375,
+        "overallTrust": 0.8210705941143153
+      },
+      "x": 865.0633032317813,
+      "y": 625.9931086668225
+    },
+    {
+      "id": "a29735b59ddda69baa15b859bfb1e0ca",
+      "name": "Gina",
+      "trustMetrics": {
+        "directTrust": 0.8974613928399743,
+        "indirectTrust": 0.8527679741730562,
+        "overallTrust": 0.9594491350768091
+      },
+      "x": 717.9691142719794,
+      "y": 511.6607845038337
+    },
+    {
+      "id": "d86d2eecd2b99d79e1612fb5ab9e9909",
+      "name": "Gina",
+      "trustMetrics": {
+        "directTrust": 0.8999777546850373,
+        "indirectTrust": 0.8965572656309284,
+        "overallTrust": 0.8315735023488119
+      },
+      "x": 719.9822037480299,
+      "y": 537.934359378557
+    },
+    {
+      "id": "12d19512be2c0e3500f0c0356e8dc069",
+      "name": "Ida",
+      "trustMetrics": {
+        "directTrust": 0.9140739200237263,
+        "indirectTrust": 0.8734840523421274,
+        "overallTrust": 1.0347331136906206
+      },
+      "x": 731.259136018981,
+      "y": 524.0904314052765
+    },
+    {
+      "id": "b9b13f76f68a90190d326d28efff82c7",
+      "name": "Alice",
+      "trustMetrics": {
+        "directTrust": 0.8657763686276674,
+        "indirectTrust": 0.9830970311927899,
+        "overallTrust": 0.9680869796585386
+      },
+      "x": 692.6210949021339,
+      "y": 589.858218715674
+    },
+    {
+      "id": "ab9fc4bdf1f5c7c5ed439dd990960c75",
+      "name": "Charlie",
+      "trustMetrics": {
+        "directTrust": 0.9058365436216693,
+        "indirectTrust": 0.7275068541883141,
+        "overallTrust": 0.9775073594853783
+      },
+      "x": 724.6692348973354,
+      "y": 436.50411251298846
+    },
+    {
+      "id": "51d348e355b25d0c662300bb7450cb6e",
+      "name": "Frank",
+      "trustMetrics": {
+        "directTrust": 0.9827965392332452,
+        "indirectTrust": 0.7601159484435744,
+        "overallTrust": 1.002039018979385
+      },
+      "x": 786.2372313865961,
+      "y": 456.06956906614465
+    },
+    {
+      "id": "4b407aa3db0c0c48b5ba55cd4494f890",
+      "name": "Jack",
+      "trustMetrics": {
+        "directTrust": 0.8428565542608539,
+        "indirectTrust": 1.0344673162262341,
+        "overallTrust": 0.8327928948435814
+      },
+      "x": 674.2852434086832,
+      "y": 620.6803897357405
+    },
+    {
+      "id": "740ba02f3a51ea9eba431a90b8a50b89",
+      "name": "Frank",
+      "trustMetrics": {
+        "directTrust": 0.9087437823796773,
+        "indirectTrust": 0.9137062112021311,
+        "overallTrust": 1.0269728593746827
+      },
+      "x": 726.9950259037419,
+      "y": 548.2237267212787
+    },
+    {
+      "id": "061ffc6a2fb921f401ded9642c54ebdd",
+      "name": "Henry",
+      "trustMetrics": {
+        "directTrust": 0.7876830813509335,
+        "indirectTrust": 0.7673659095269997,
+        "overallTrust": 0.8089233559955028
+      },
+      "x": 630.1464650807468,
+      "y": 460.4195457161998
+    },
+    {
+      "id": "3fa9e336153252bdf1340ebcd316eae8",
+      "name": "Frank",
+      "trustMetrics": {
+        "directTrust": 1.0352017958532003,
+        "indirectTrust": 0.8804860644707392,
+        "overallTrust": 0.8921008050356058
+      },
+      "x": 828.1614366825602,
+      "y": 528.2916386824435
+    },
+    {
+      "id": "e867c695876e507e85b257da792afa54",
+      "name": "Dave",
+      "trustMetrics": {
+        "directTrust": 0.7403026059229271,
+        "indirectTrust": 0.9932411265844623,
+        "overallTrust": 0.791901902987529
+      },
+      "x": 592.2420847383416,
+      "y": 595.9446759506774
+    },
+    {
+      "id": "31b24ab0fa8f274f3638c6e27953e984",
+      "name": "Bob",
+      "trustMetrics": {
+        "directTrust": 0.8957838606442098,
+        "indirectTrust": 0.9095917989986697,
+        "overallTrust": 1.0387075967468964
+      },
+      "x": 716.6270885153679,
+      "y": 545.7550793992018
+    },
+    {
+      "id": "2ef5a1aac5b6ab3e9305468d93055bd4",
+      "name": "Dave",
+      "trustMetrics": {
+        "directTrust": 1.0424480032615875,
+        "indirectTrust": 0.9941159372700538,
+        "overallTrust": 1.0340065812363095
+      },
+      "x": 833.95840260927,
+      "y": 596.4695623620322
+    },
+    {
+      "id": "8b80c611019255ac605aa9eb2201b1d7",
+      "name": "Jack",
+      "trustMetrics": {
+        "directTrust": 0.897479388779459,
+        "indirectTrust": 0.7241096096350159,
+        "overallTrust": 0.8892533317342188
+      },
+      "x": 717.9835110235672,
+      "y": 434.46576578100957
+    },
+    {
+      "id": "96218ef3713f88aa3279cdf66b0f0064",
+      "name": "Eve",
+      "trustMetrics": {
+        "directTrust": 1.0163800841212296,
+        "indirectTrust": 0.8874747421409102,
+        "overallTrust": 0.9157546623763058
+      },
+      "x": 813.1040672969837,
+      "y": 532.484845284546
+    },
+    {
+      "id": "a64726448f5b2666bb4d4aff3e71f9cf",
+      "name": "Henry",
+      "trustMetrics": {
+        "directTrust": 0.8018821545490216,
+        "indirectTrust": 1.0551646614575043,
+        "overallTrust": 0.8156106433885895
+      },
+      "x": 641.5057236392172,
+      "y": 633.0987968745026
+    }
+  ],
+  "links": [
+    {
+      "source": 0,
+      "target": 1,
+      "trust": 0.20538040733858898
+    },
+    {
+      "source": 0,
+      "target": 2,
+      "trust": 0.8719345539203842
+    },
+    {
+      "source": 0,
+      "target": 3,
+      "trust": 0.663744957331007
+    },
+    {
+      "source": 0,
+      "target": 4,
+      "trust": 0.7246944677781499
+    },
+    {
+      "source": 0,
+      "target": 5,
+      "trust": 0.9330832952111974
+    },
+    {
+      "source": 0,
+      "target": 6,
+      "trust": 0.818008246925835
+    },
+    {
+      "source": 0,
+      "target": 7,
+      "trust": 0.6820086916822434
+    },
+    {
+      "source": 0,
+      "target": 8,
+      "trust": 0.6857048051797701
+    },
+    {
+      "source": 0,
+      "target": 9,
+      "trust": 0.7138209006201441
+    },
+    {
+      "source": 0,
+      "target": 10,
+      "trust": 0.9403815164886684
+    },
+    {
+      "source": 0,
+      "target": 11,
+      "trust": 0.5208548024943269
+    },
+    {
+      "source": 0,
+      "target": 12,
+      "trust": 0.014311607118972391
+    },
+    {
+      "source": 0,
+      "target": 13,
+      "trust": 0.869047682977869
+    },
+    {
+      "source": 0,
+      "target": 14,
+      "trust": 0.21639167270969972
+    },
+    {
+      "source": 0,
+      "target": 15,
+      "trust": 0.027898541754824313
+    },
+    {
+      "source": 0,
+      "target": 16,
+      "trust": 0.1511515485779853
+    },
+    {
+      "source": 0,
+      "target": 17,
+      "trust": 0.10916474201017401
+    },
+    {
+      "source": 0,
+      "target": 18,
+      "trust": 0.6293869746668417
+    },
+    {
+      "source": 0,
+      "target": 19,
+      "trust": 0.7191240801282679
+    },
+    {
+      "source": 0,
+      "target": 20,
+      "trust": 0.39046698573416005
+    },
+    {
+      "source": 0,
+      "target": 21,
+      "trust": 0.4066192749696602
+    },
+    {
+      "source": 0,
+      "target": 22,
+      "trust": 0.3306327309870394
+    },
+    {
+      "source": 0,
+      "target": 23,
+      "trust": 0.4365262181897491
+    },
+    {
+      "source": 0,
+      "target": 24,
+      "trust": 0.7749340520358052
+    },
+    {
+      "source": 1,
+      "target": 2,
+      "trust": 0.4871392050250596
+    },
+    {
+      "source": 1,
+      "target": 3,
+      "trust": 0.9207297942550348
+    },
+    {
+      "source": 1,
+      "target": 4,
+      "trust": 0.45783959431974663
+    },
+    {
+      "source": 1,
+      "target": 5,
+      "trust": 0.12137085272557058
+    },
+    {
+      "source": 1,
+      "target": 6,
+      "trust": 0.16390707405702898
+    },
+    {
+      "source": 1,
+      "target": 7,
+      "trust": 0.4329808858331399
+    },
+    {
+      "source": 1,
+      "target": 8,
+      "trust": 0.11247710693244883
+    },
+    {
+      "source": 1,
+      "target": 9,
+      "trust": 0.502611154093298
+    },
+    {
+      "source": 1,
+      "target": 10,
+      "trust": 0.07132310333354286
+    },
+    {
+      "source": 1,
+      "target": 11,
+      "trust": 0.15913113687881952
+    },
+    {
+      "source": 1,
+      "target": 12,
+      "trust": 0.2720594999178152
+    },
+    {
+      "source": 1,
+      "target": 13,
+      "trust": 0.6158771443647946
+    },
+    {
+      "source": 1,
+      "target": 14,
+      "trust": 0.8439712524437029
+    },
+    {
+      "source": 1,
+      "target": 15,
+      "trust": 0.5192665761753297
+    },
+    {
+      "source": 1,
+      "target": 16,
+      "trust": 0.39199354905890704
+    },
+    {
+      "source": 1,
+      "target": 17,
+      "trust": 0.5230197186246632
+    },
+    {
+      "source": 1,
+      "target": 18,
+      "trust": 0.7650315921714679
+    },
+    {
+      "source": 1,
+      "target": 19,
+      "trust": 0.9023180756556775
+    },
+    {
+      "source": 1,
+      "target": 20,
+      "trust": 0.49203948342087567
+    },
+    {
+      "source": 1,
+      "target": 21,
+      "trust": 0.9540997069410699
+    },
+    {
+      "source": 1,
+      "target": 22,
+      "trust": 0.797269496048459
+    },
+    {
+      "source": 1,
+      "target": 23,
+      "trust": 0.3339349540672505
+    },
+    {
+      "source": 1,
+      "target": 24,
+      "trust": 0.35495230729329874
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "trust": 0.5823797707929945
+    },
+    {
+      "source": 2,
+      "target": 4,
+      "trust": 0.03313586474360597
+    },
+    {
+      "source": 2,
+      "target": 5,
+      "trust": 0.6002813599789363
+    },
+    {
+      "source": 2,
+      "target": 6,
+      "trust": 0.5233346317810925
+    },
+    {
+      "source": 2,
+      "target": 7,
+      "trust": 0.8497843471672129
+    },
+    {
+      "source": 2,
+      "target": 8,
+      "trust": 0.007895990492010174
+    },
+    {
+      "source": 2,
+      "target": 9,
+      "trust": 0.42405530391353063
+    },
+    {
+      "source": 2,
+      "target": 10,
+      "trust": 0.8530341037182856
+    },
+    {
+      "source": 2,
+      "target": 11,
+      "trust": 0.9831740024374358
+    },
+    {
+      "source": 2,
+      "target": 12,
+      "trust": 0.6423581268768299
+    },
+    {
+      "source": 2,
+      "target": 13,
+      "trust": 0.7856012093213383
+    },
+    {
+      "source": 2,
+      "target": 14,
+      "trust": 0.3609791030279066
+    },
+    {
+      "source": 2,
+      "target": 15,
+      "trust": 0.9124096021549739
+    },
+    {
+      "source": 2,
+      "target": 16,
+      "trust": 0.12771518029904483
+    },
+    {
+      "source": 2,
+      "target": 17,
+      "trust": 0.019929742542706297
+    },
+    {
+      "source": 2,
+      "target": 18,
+      "trust": 0.8392243327045428
+    },
+    {
+      "source": 2,
+      "target": 19,
+      "trust": 0.3927217383251982
+    },
+    {
+      "source": 2,
+      "target": 20,
+      "trust": 0.5832399311791643
+    },
+    {
+      "source": 2,
+      "target": 21,
+      "trust": 0.13530943700883036
+    },
+    {
+      "source": 2,
+      "target": 22,
+      "trust": 0.6032043907459033
+    },
+    {
+      "source": 2,
+      "target": 23,
+      "trust": 0.16396576966835563
+    },
+    {
+      "source": 2,
+      "target": 24,
+      "trust": 0.3142839539332518
+    },
+    {
+      "source": 3,
+      "target": 4,
+      "trust": 0.9363119109755125
+    },
+    {
+      "source": 3,
+      "target": 5,
+      "trust": 0.2712784980905436
+    },
+    {
+      "source": 3,
+      "target": 6,
+      "trust": 0.5359729695873192
+    },
+    {
+      "source": 3,
+      "target": 7,
+      "trust": 0.5419211718185097
+    },
+    {
+      "source": 3,
+      "target": 8,
+      "trust": 0.5563463633341725
+    },
+    {
+      "source": 3,
+      "target": 9,
+      "trust": 0.8326281094649663
+    },
+    {
+      "source": 3,
+      "target": 10,
+      "trust": 0.14107841222393214
+    },
+    {
+      "source": 3,
+      "target": 11,
+      "trust": 0.5467695569455289
+    },
+    {
+      "source": 3,
+      "target": 12,
+      "trust": 0.17944854594794069
+    },
+    {
+      "source": 3,
+      "target": 13,
+      "trust": 0.5762254249031042
+    },
+    {
+      "source": 3,
+      "target": 14,
+      "trust": 0.7797521920553869
+    },
+    {
+      "source": 3,
+      "target": 15,
+      "trust": 0.6263638680231856
+    },
+    {
+      "source": 3,
+      "target": 16,
+      "trust": 0.8386935821910959
+    },
+    {
+      "source": 3,
+      "target": 17,
+      "trust": 0.2454662659350031
+    },
+    {
+      "source": 3,
+      "target": 18,
+      "trust": 0.9645172499741785
+    },
+    {
+      "source": 3,
+      "target": 19,
+      "trust": 0.6363083621709247
+    },
+    {
+      "source": 3,
+      "target": 20,
+      "trust": 0.7127865415359835
+    },
+    {
+      "source": 3,
+      "target": 21,
+      "trust": 0.5249447314981404
+    },
+    {
+      "source": 3,
+      "target": 22,
+      "trust": 0.12831331079876596
+    },
+    {
+      "source": 3,
+      "target": 23,
+      "trust": 0.6377666024475015
+    },
+    {
+      "source": 3,
+      "target": 24,
+      "trust": 0.46680294913980536
+    },
+    {
+      "source": 4,
+      "target": 5,
+      "trust": 0.9605288659833764
+    },
+    {
+      "source": 4,
+      "target": 6,
+      "trust": 0.09487373855649794
+    },
+    {
+      "source": 4,
+      "target": 7,
+      "trust": 0.1216998303768253
+    },
+    {
+      "source": 4,
+      "target": 8,
+      "trust": 0.6116389161150138
+    },
+    {
+      "source": 4,
+      "target": 9,
+      "trust": 0.8622130598129809
+    },
+    {
+      "source": 4,
+      "target": 10,
+      "trust": 0.2491216063134396
+    },
+    {
+      "source": 4,
+      "target": 11,
+      "trust": 0.4686188197384158
+    },
+    {
+      "source": 4,
+      "target": 12,
+      "trust": 0.87651999682328
+    },
+    {
+      "source": 4,
+      "target": 13,
+      "trust": 0.8281377868632307
+    },
+    {
+      "source": 4,
+      "target": 14,
+      "trust": 0.0889763993408903
+    },
+    {
+      "source": 4,
+      "target": 15,
+      "trust": 0.35156328639927326
+    },
+    {
+      "source": 4,
+      "target": 16,
+      "trust": 0.6485620638398673
+    },
+    {
+      "source": 4,
+      "target": 17,
+      "trust": 0.07290398265751508
+    },
+    {
+      "source": 4,
+      "target": 18,
+      "trust": 0.7029904161291278
+    },
+    {
+      "source": 4,
+      "target": 19,
+      "trust": 0.2583140002069979
+    },
+    {
+      "source": 4,
+      "target": 20,
+      "trust": 0.7105390151016999
+    },
+    {
+      "source": 4,
+      "target": 21,
+      "trust": 0.13042114239581193
+    },
+    {
+      "source": 4,
+      "target": 22,
+      "trust": 0.8207468123193413
+    },
+    {
+      "source": 4,
+      "target": 23,
+      "trust": 0.7609933846092558
+    },
+    {
+      "source": 4,
+      "target": 24,
+      "trust": 0.6423158294688265
+    },
+    {
+      "source": 5,
+      "target": 6,
+      "trust": 0.6656945705553872
+    },
+    {
+      "source": 5,
+      "target": 7,
+      "trust": 0.6746776861610939
+    },
+    {
+      "source": 5,
+      "target": 8,
+      "trust": 0.5454430046947643
+    },
+    {
+      "source": 5,
+      "target": 9,
+      "trust": 0.33420258136872194
+    },
+    {
+      "source": 5,
+      "target": 10,
+      "trust": 0.2016808900759708
+    },
+    {
+      "source": 5,
+      "target": 11,
+      "trust": 0.47367931875516045
+    },
+    {
+      "source": 5,
+      "target": 12,
+      "trust": 0.02798119829768142
+    },
+    {
+      "source": 5,
+      "target": 13,
+      "trust": 0.8965752850908801
+    },
+    {
+      "source": 5,
+      "target": 14,
+      "trust": 0.9178080597652838
+    },
+    {
+      "source": 5,
+      "target": 15,
+      "trust": 0.3318475910991485
+    },
+    {
+      "source": 5,
+      "target": 16,
+      "trust": 0.3165134112383925
+    },
+    {
+      "source": 5,
+      "target": 17,
+      "trust": 0.26062539559763587
+    },
+    {
+      "source": 5,
+      "target": 18,
+      "trust": 0.5798152125527278
+    },
+    {
+      "source": 5,
+      "target": 19,
+      "trust": 0.2738211829270363
+    },
+    {
+      "source": 5,
+      "target": 20,
+      "trust": 0.6988057347833188
+    },
+    {
+      "source": 5,
+      "target": 21,
+      "trust": 0.5600007156054208
+    },
+    {
+      "source": 5,
+      "target": 22,
+      "trust": 0.423104443544321
+    },
+    {
+      "source": 5,
+      "target": 23,
+      "trust": 0.5294020644108954
+    },
+    {
+      "source": 5,
+      "target": 24,
+      "trust": 0.7763263198636563
+    },
+    {
+      "source": 6,
+      "target": 7,
+      "trust": 0.9475298764496596
+    },
+    {
+      "source": 6,
+      "target": 8,
+      "trust": 0.11600305587939808
+    },
+    {
+      "source": 6,
+      "target": 9,
+      "trust": 0.8824365207767266
+    },
+    {
+      "source": 6,
+      "target": 10,
+      "trust": 0.3891733437587801
+    },
+    {
+      "source": 6,
+      "target": 11,
+      "trust": 0.618134988693499
+    },
+    {
+      "source": 6,
+      "target": 12,
+      "trust": 0.8189203945121313
+    },
+    {
+      "source": 6,
+      "target": 13,
+      "trust": 0.24880044915262167
+    },
+    {
+      "source": 6,
+      "target": 14,
+      "trust": 0.8646118879603779
+    },
+    {
+      "source": 6,
+      "target": 15,
+      "trust": 0.2751091292805834
+    },
+    {
+      "source": 6,
+      "target": 16,
+      "trust": 0.8455716684940606
+    },
+    {
+      "source": 6,
+      "target": 17,
+      "trust": 0.012162043261339628
+    },
+    {
+      "source": 6,
+      "target": 18,
+      "trust": 0.8270088475489394
+    },
+    {
+      "source": 6,
+      "target": 19,
+      "trust": 0.43554326883983796
+    },
+    {
+      "source": 6,
+      "target": 20,
+      "trust": 0.22168916651907078
+    },
+    {
+      "source": 6,
+      "target": 21,
+      "trust": 0.6410051526756764
+    },
+    {
+      "source": 6,
+      "target": 22,
+      "trust": 0.2004896027709857
+    },
+    {
+      "source": 6,
+      "target": 23,
+      "trust": 0.4961191305378829
+    },
+    {
+      "source": 6,
+      "target": 24,
+      "trust": 0.20213598009633138
+    },
+    {
+      "source": 7,
+      "target": 8,
+      "trust": 0.7527533229637156
+    },
+    {
+      "source": 7,
+      "target": 9,
+      "trust": 0.5808909422455784
+    },
+    {
+      "source": 7,
+      "target": 10,
+      "trust": 0.7660861686438722
+    },
+    {
+      "source": 7,
+      "target": 11,
+      "trust": 0.364680535132504
+    },
+    {
+      "source": 7,
+      "target": 12,
+      "trust": 0.4512684246357306
+    },
+    {
+      "source": 7,
+      "target": 13,
+      "trust": 0.1550277515527132
+    },
+    {
+      "source": 7,
+      "target": 14,
+      "trust": 0.915970890936582
+    },
+    {
+      "source": 7,
+      "target": 15,
+      "trust": 0.7020648114413834
+    },
+    {
+      "source": 7,
+      "target": 16,
+      "trust": 0.6683865724423346
+    },
+    {
+      "source": 7,
+      "target": 17,
+      "trust": 0.0571894658625316
+    },
+    {
+      "source": 7,
+      "target": 18,
+      "trust": 0.8953530639782299
+    },
+    {
+      "source": 7,
+      "target": 19,
+      "trust": 0.7237742333073993
+    },
+    {
+      "source": 7,
+      "target": 20,
+      "trust": 0.9004269517005241
+    },
+    {
+      "source": 7,
+      "target": 21,
+      "trust": 0.5446018970688842
+    },
+    {
+      "source": 7,
+      "target": 22,
+      "trust": 0.598982805734976
+    },
+    {
+      "source": 7,
+      "target": 23,
+      "trust": 0.3784227906102273
+    },
+    {
+      "source": 7,
+      "target": 24,
+      "trust": 0.8626549417971852
+    },
+    {
+      "source": 8,
+      "target": 9,
+      "trust": 0.8252450746762772
+    },
+    {
+      "source": 8,
+      "target": 10,
+      "trust": 0.2471816767119679
+    },
+    {
+      "source": 8,
+      "target": 11,
+      "trust": 0.5468860119667656
+    },
+    {
+      "source": 8,
+      "target": 12,
+      "trust": 0.23518080238751948
+    },
+    {
+      "source": 8,
+      "target": 13,
+      "trust": 0.9845222589747871
+    },
+    {
+      "source": 8,
+      "target": 14,
+      "trust": 0.18487548056684822
+    },
+    {
+      "source": 8,
+      "target": 15,
+      "trust": 0.7769894700958899
+    },
+    {
+      "source": 8,
+      "target": 16,
+      "trust": 0.5421764121698647
+    },
+    {
+      "source": 8,
+      "target": 17,
+      "trust": 0.17210964866464518
+    },
+    {
+      "source": 8,
+      "target": 18,
+      "trust": 0.47124646528523906
+    },
+    {
+      "source": 8,
+      "target": 19,
+      "trust": 0.5358968813022253
+    },
+    {
+      "source": 8,
+      "target": 20,
+      "trust": 0.7019063542307464
+    },
+    {
+      "source": 8,
+      "target": 21,
+      "trust": 0.1946443372080484
+    },
+    {
+      "source": 8,
+      "target": 22,
+      "trust": 0.710154559304824
+    },
+    {
+      "source": 8,
+      "target": 23,
+      "trust": 0.44092761956635007
+    },
+    {
+      "source": 8,
+      "target": 24,
+      "trust": 0.939615513035899
+    },
+    {
+      "source": 9,
+      "target": 10,
+      "trust": 0.12443549916728136
+    },
+    {
+      "source": 9,
+      "target": 11,
+      "trust": 0.05745886354325491
+    },
+    {
+      "source": 9,
+      "target": 12,
+      "trust": 0.027068983536824298
+    },
+    {
+      "source": 9,
+      "target": 13,
+      "trust": 0.5513924981649636
+    },
+    {
+      "source": 9,
+      "target": 14,
+      "trust": 0.8199586096115632
+    },
+    {
+      "source": 9,
+      "target": 15,
+      "trust": 0.3511903309980928
+    },
+    {
+      "source": 9,
+      "target": 16,
+      "trust": 0.23397871288956495
+    },
+    {
+      "source": 9,
+      "target": 17,
+      "trust": 0.2804689583380917
+    },
+    {
+      "source": 9,
+      "target": 18,
+      "trust": 0.01985281391532001
+    },
+    {
+      "source": 9,
+      "target": 19,
+      "trust": 0.9557870284035539
+    },
+    {
+      "source": 9,
+      "target": 20,
+      "trust": 0.4373724005649553
+    },
+    {
+      "source": 9,
+      "target": 21,
+      "trust": 0.8084028166102206
+    },
+    {
+      "source": 9,
+      "target": 22,
+      "trust": 0.7228156440232643
+    },
+    {
+      "source": 9,
+      "target": 23,
+      "trust": 0.9342910763016794
+    },
+    {
+      "source": 9,
+      "target": 24,
+      "trust": 0.9672916687696287
+    },
+    {
+      "source": 10,
+      "target": 11,
+      "trust": 0.4602563890485869
+    },
+    {
+      "source": 10,
+      "target": 12,
+      "trust": 0.3846968263534156
+    },
+    {
+      "source": 10,
+      "target": 13,
+      "trust": 0.7005378776199904
+    },
+    {
+      "source": 10,
+      "target": 14,
+      "trust": 0.9859686108631422
+    },
+    {
+      "source": 10,
+      "target": 15,
+      "trust": 0.5297780971189718
+    },
+    {
+      "source": 10,
+      "target": 16,
+      "trust": 0.46107161696828336
+    },
+    {
+      "source": 10,
+      "target": 17,
+      "trust": 0.9927572085042389
+    },
+    {
+      "source": 10,
+      "target": 18,
+      "trust": 0.891336133709522
+    },
+    {
+      "source": 10,
+      "target": 19,
+      "trust": 0.8767092202247257
+    },
+    {
+      "source": 10,
+      "target": 20,
+      "trust": 0.6858189906039229
+    },
+    {
+      "source": 10,
+      "target": 21,
+      "trust": 0.6004730269076561
+    },
+    {
+      "source": 10,
+      "target": 22,
+      "trust": 0.16155721221463137
+    },
+    {
+      "source": 10,
+      "target": 23,
+      "trust": 0.9027060679885555
+    },
+    {
+      "source": 10,
+      "target": 24,
+      "trust": 0.38594373152816397
+    },
+    {
+      "source": 11,
+      "target": 12,
+      "trust": 0.9946020223523386
+    },
+    {
+      "source": 11,
+      "target": 13,
+      "trust": 0.18446584949993539
+    },
+    {
+      "source": 11,
+      "target": 14,
+      "trust": 0.5778894733373632
+    },
+    {
+      "source": 11,
+      "target": 15,
+      "trust": 0.6334772253803294
+    },
+    {
+      "source": 11,
+      "target": 16,
+      "trust": 0.6565770627029741
+    },
+    {
+      "source": 11,
+      "target": 17,
+      "trust": 0.9091696601857249
+    },
+    {
+      "source": 11,
+      "target": 18,
+      "trust": 0.12220089132203871
+    },
+    {
+      "source": 11,
+      "target": 19,
+      "trust": 0.42148835773886417
+    },
+    {
+      "source": 11,
+      "target": 20,
+      "trust": 0.5484261479209225
+    },
+    {
+      "source": 11,
+      "target": 21,
+      "trust": 0.679454003671365
+    },
+    {
+      "source": 11,
+      "target": 22,
+      "trust": 0.5992092755345975
+    },
+    {
+      "source": 11,
+      "target": 23,
+      "trust": 0.23205082921154419
+    },
+    {
+      "source": 11,
+      "target": 24,
+      "trust": 0.9182037595479526
+    },
+    {
+      "source": 12,
+      "target": 13,
+      "trust": 0.24557649284311345
+    },
+    {
+      "source": 12,
+      "target": 14,
+      "trust": 0.9877603245200364
+    },
+    {
+      "source": 12,
+      "target": 15,
+      "trust": 0.2546998873434041
+    },
+    {
+      "source": 12,
+      "target": 16,
+      "trust": 0.2592852113466668
+    },
+    {
+      "source": 12,
+      "target": 17,
+      "trust": 0.08505083181334361
+    },
+    {
+      "source": 12,
+      "target": 18,
+      "trust": 0.23347609321418505
+    },
+    {
+      "source": 12,
+      "target": 19,
+      "trust": 0.046215432616262486
+    },
+    {
+      "source": 12,
+      "target": 20,
+      "trust": 0.507096254151804
+    },
+    {
+      "source": 12,
+      "target": 21,
+      "trust": 0.058979692455572774
+    },
+    {
+      "source": 12,
+      "target": 22,
+      "trust": 0.04498154171581348
+    },
+    {
+      "source": 12,
+      "target": 23,
+      "trust": 0.8214323328934645
+    },
+    {
+      "source": 12,
+      "target": 24,
+      "trust": 0.94321813096093
+    },
+    {
+      "source": 13,
+      "target": 14,
+      "trust": 0.904366942463382
+    },
+    {
+      "source": 13,
+      "target": 15,
+      "trust": 0.7696889433872742
+    },
+    {
+      "source": 13,
+      "target": 16,
+      "trust": 0.7090627658398065
+    },
+    {
+      "source": 13,
+      "target": 17,
+      "trust": 0.9492543356265903
+    },
+    {
+      "source": 13,
+      "target": 18,
+      "trust": 0.7205945248710226
+    },
+    {
+      "source": 13,
+      "target": 19,
+      "trust": 0.44469025483278624
+    },
+    {
+      "source": 13,
+      "target": 20,
+      "trust": 0.3327497972653253
+    },
+    {
+      "source": 13,
+      "target": 21,
+      "trust": 0.8416570367097105
+    },
+    {
+      "source": 13,
+      "target": 22,
+      "trust": 0.5145899066222466
+    },
+    {
+      "source": 13,
+      "target": 23,
+      "trust": 0.5521312773101674
+    },
+    {
+      "source": 13,
+      "target": 24,
+      "trust": 0.2345794676388273
+    },
+    {
+      "source": 14,
+      "target": 15,
+      "trust": 0.30961859137174863
+    },
+    {
+      "source": 14,
+      "target": 16,
+      "trust": 0.36412074345834666
+    },
+    {
+      "source": 14,
+      "target": 17,
+      "trust": 0.8672253845550064
+    },
+    {
+      "source": 14,
+      "target": 18,
+      "trust": 0.6103557494743108
+    },
+    {
+      "source": 14,
+      "target": 19,
+      "trust": 0.8276726685585878
+    },
+    {
+      "source": 14,
+      "target": 20,
+      "trust": 0.38321974022354244
+    },
+    {
+      "source": 14,
+      "target": 21,
+      "trust": 0.46809098411992567
+    },
+    {
+      "source": 14,
+      "target": 22,
+      "trust": 0.6209345512250211
+    },
+    {
+      "source": 14,
+      "target": 23,
+      "trust": 0.35837241384320806
+    },
+    {
+      "source": 14,
+      "target": 24,
+      "trust": 0.6471865628368221
+    },
+    {
+      "source": 15,
+      "target": 16,
+      "trust": 0.8936240798006785
+    },
+    {
+      "source": 15,
+      "target": 17,
+      "trust": 0.8989128654167131
+    },
+    {
+      "source": 15,
+      "target": 18,
+      "trust": 0.2531122276857094
+    },
+    {
+      "source": 15,
+      "target": 19,
+      "trust": 0.30915473864343834
+    },
+    {
+      "source": 15,
+      "target": 20,
+      "trust": 0.9888780055483246
+    },
+    {
+      "source": 15,
+      "target": 21,
+      "trust": 0.5535931884001672
+    },
+    {
+      "source": 15,
+      "target": 22,
+      "trust": 0.8562659824589547
+    },
+    {
+      "source": 15,
+      "target": 23,
+      "trust": 0.4869585233483067
+    },
+    {
+      "source": 15,
+      "target": 24,
+      "trust": 0.7829167172022127
+    },
+    {
+      "source": 16,
+      "target": 17,
+      "trust": 0.0045191896717518
+    },
+    {
+      "source": 16,
+      "target": 18,
+      "trust": 0.9495721134924038
+    },
+    {
+      "source": 16,
+      "target": 19,
+      "trust": 0.5115141201784812
+    },
+    {
+      "source": 16,
+      "target": 20,
+      "trust": 0.04579478239738455
+    },
+    {
+      "source": 16,
+      "target": 21,
+      "trust": 0.9369155646169565
+    },
+    {
+      "source": 16,
+      "target": 22,
+      "trust": 0.9608788572311089
+    },
+    {
+      "source": 16,
+      "target": 23,
+      "trust": 0.48004405235722203
+    },
+    {
+      "source": 16,
+      "target": 24,
+      "trust": 0.0927694554702061
+    },
+    {
+      "source": 17,
+      "target": 18,
+      "trust": 0.6754992910248692
+    },
+    {
+      "source": 17,
+      "target": 19,
+      "trust": 0.20021087307282048
+    },
+    {
+      "source": 17,
+      "target": 20,
+      "trust": 0.1570468803856082
+    },
+    {
+      "source": 17,
+      "target": 21,
+      "trust": 0.599606693742109
+    },
+    {
+      "source": 17,
+      "target": 22,
+      "trust": 0.5923370304095998
+    },
+    {
+      "source": 17,
+      "target": 23,
+      "trust": 0.07421733259134711
+    },
+    {
+      "source": 17,
+      "target": 24,
+      "trust": 0.8088193285839529
+    },
+    {
+      "source": 18,
+      "target": 19,
+      "trust": 0.6848650512440493
+    },
+    {
+      "source": 18,
+      "target": 20,
+      "trust": 0.6756366252287613
+    },
+    {
+      "source": 18,
+      "target": 21,
+      "trust": 0.09314859867528935
+    },
+    {
+      "source": 18,
+      "target": 22,
+      "trust": 0.03086444585816639
+    },
+    {
+      "source": 18,
+      "target": 23,
+      "trust": 0.044957531493220904
+    },
+    {
+      "source": 18,
+      "target": 24,
+      "trust": 0.36042887018931324
+    },
+    {
+      "source": 19,
+      "target": 20,
+      "trust": 0.9194620828563205
+    },
+    {
+      "source": 19,
+      "target": 21,
+      "trust": 0.8286670907529128
+    },
+    {
+      "source": 19,
+      "target": 22,
+      "trust": 0.9625831587065732
+    },
+    {
+      "source": 19,
+      "target": 23,
+      "trust": 0.46116129508099046
+    },
+    {
+      "source": 19,
+      "target": 24,
+      "trust": 0.9452416233805958
+    },
+    {
+      "source": 20,
+      "target": 21,
+      "trust": 0.7667039948046652
+    },
+    {
+      "source": 20,
+      "target": 22,
+      "trust": 0.06374635078163315
+    },
+    {
+      "source": 20,
+      "target": 23,
+      "trust": 0.8373018513922883
+    },
+    {
+      "source": 20,
+      "target": 24,
+      "trust": 0.04246268274154996
+    },
+    {
+      "source": 21,
+      "target": 22,
+      "trust": 0.9630445437756487
+    },
+    {
+      "source": 21,
+      "target": 23,
+      "trust": 0.5429113463769766
+    },
+    {
+      "source": 21,
+      "target": 24,
+      "trust": 0.6350363338854741
+    },
+    {
+      "source": 22,
+      "target": 23,
+      "trust": 0.62425765005682
+    },
+    {
+      "source": 22,
+      "target": 24,
+      "trust": 0.3454038375977615
+    },
+    {
+      "source": 23,
+      "target": 24,
+      "trust": 0.813794624044933
+    }
+  ]
+}
