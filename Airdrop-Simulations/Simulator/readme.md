@@ -1,40 +1,35 @@
-# AirdropSimulation
+# ELT2.0 Airdrop Simulation Tool
 
-A Python utility that simulates the distribution of a cryptocurrency airdrop using a web of trust graph, where the nodes are identified by decentralized identifiers (DIDs) and the edges represent trust relationships. The utility uses the Evidence-Based Subjective Logic (EBSL) algorithm to compute the reputation of the nodes, and a proof-of-stake mechanism to incentivize the distribution of the airdrop.
+## Overview
+
+This tool is designed to simulate the distribution of a cryptocurrency airdrop using a graph-based approach. The simulation is implemented using the NetworkX library and is run inside a Jupyter Notebook using the iPySigma library, which is built on top of Sigma.js.
 
 ## Installation
 
-Clone this repository and run the following command to install the required libraries:
+To use this tool, you will need to have Python 3.7+ and Jupyter Notebook installed. You can install the necessary dependencies by running the following command:
 
-`pip install -r requirements.txt`
 
-Usage
-```
-from AirdropSimulation import AirdropSimulation
+## Usage
 
-simulation = AirdropSimulation(num_nodes=1000, randomness=0.5, stake_required=0.1, opt_in_prob=0.5, distributor_prob=0.1)
-simulation.create_initial_nodes()
-simulation.iterate_data_set(3)
-```
-Parameters
-```
-    num_nodes: The number of nodes in the graph.
-    randomness: A value between 0 and 1 that controls the randomness of the reputation of the nodes.
-    stake_required: A value between 0 and 1 that represents the minimum stake required for a node to become a distributor.
-    opt_in_prob: A value between 0 and 1 that represents the probability of a node opting in to become a distributor.
-    distributor_prob: A value between 0 and 1 that represents the probability of a distributor node distributing to a new node.
-```
-Methods
-```
-    create_initial_nodes(): Creates the initial nodes of the graph.
-    iterate_data_set(num_iterations): Iterates the data set for a certain number of stages.
-    iterate_nodes(): Iterates the nodes of the graph, and creates a trust or airdrop edge depending on the node's properties.
-    check_node_distributor_eligibility(node): Checks if a node is eligible to become a distributor.
-    check_node_opt_in(node): Checks if a node has opted in to become a distributor.
-    check_distributor_probability(node): Checks if a distributor node distributes to a new node based on the distributor probability.
-```
-Contributing
+1. Open the Jupyter Notebook file called `Airdrop-Distributor-Simulations.ipynb` in the `Airdrop-Simulations/Simulator` directory.
+2. Run the first cell in the notebook, which imports the necessary libraries and sets up the initial graph.
+3. Run the second cell in the notebook, which runs the simulation for a specified number of iterations.
+4. Run the third cell in the notebook, which uses ipysigma library to visualize the graph.
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+## Additional Features
 
-Please make sure to update tests as appropriate.
+- You can change the number of nodes in the initial graph, the number of iterations the simulation runs for, and the randomness factor that determines the probability of an airdrop occurring.
+- The initial graph is a directed graph with 50 nodes.
+- The simulation starts with an initial distribution of nodes, and the nodes will have random values for the following attributes: reputation, stake and opt-in.
+- The simulation runs in a loop for a specified number of iterations, during each iteration, the reputation, stake, and opt-in attributes of each node are incremented by a random value multiplied by the randomness attribute.
+- The simulation checks if each node meets the eligibility criteria to be a distributor and if the distributor probability is met, a new node is added to the graph and connected to the current node via an "airdrop" edge.
+- The simulation increments the stage of each node.
+- The simulation will only allow one distributor to airdrop a node once, ensuring a fair distribution.
+- The simulation will ensure that the initial airdrop contract is connected to all new distributors via the "airdrop" edge.
+
+
+## Todo
+
+- Implement EBSL metrics and compute emergent trust metrics using it
+- Investigate Pareto Factor as a metric
+
